@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class CollectionsDemo {
+
+    public static void main(String[] args) {
+
+        // ArrayList - ordered, allows duplicates
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Java");
+        arrayList.add("Spring Boot");
+        arrayList.add("Angular");
+        arrayList.add("Java");
+        System.out.println("ArrayList: " + arrayList);
+
+        // LinkedList - doubly linked list implementation
+        List<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        linkedList.addFirst(5);
+        System.out.println("LinkedList: " + linkedList);
+
+        // HashSet - unordered, no duplicates
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("AWS");
+        hashSet.add("Docker");
+        hashSet.add("AWS"); // duplicate ignored
+        System.out.println("HashSet: " + hashSet);
+
+        // TreeSet - sorted order
+        Set<Integer> treeSet = new TreeSet<>();
+        treeSet.add(50);
+        treeSet.add(10);
+        treeSet.add(30);
+        treeSet.add(20);
+        System.out.println("TreeSet: " + treeSet);
+
+        // HashMap - key-value pairs
+        Map<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "Spring Boot");
+        hashMap.put(2, "React");
+        hashMap.put(3, "AWS");
+        System.out.println("HashMap: " + hashMap);
+
+        // Iterating HashMap
+        System.out.println("Iterating HashMap:");
+        for (Map.Entry<Integer, String> entry : hashMap.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+    }
+}
